@@ -6,6 +6,8 @@
 # Learn to predict whether a passenger survived (0/1)
 # -----------------------------------------------------
 
+# pip install pandas tensorflow numpy
+
 import pandas as pd
 from tensorflow import keras
 from tensorflow.keras import layers
@@ -106,8 +108,17 @@ print("1st class female →", round(float(p[0][0]), 3),
 # Example 2: 3rd class male
 # pclass = 3 → scaled = 3/3 = 1
 # gender = 0 (male)
-test = np.array([[1, 0]])
+test = np.array([[3/3, 0]])
 p = model.predict(test)
 
 print("3rd class male →", round(float(p[0][0]), 3),
+      "→", int(p[0][0] >= 0.5))
+
+# Example 3: 2nd class male
+# pclass = 2 → scaled = 2/3 = 0.66
+# gender = 0 (male)
+test = np.array([[2/3, 0]])
+p = model.predict(test)
+
+print("2nd class male →", round(float(p[0][0]), 2),
       "→", int(p[0][0] >= 0.5))

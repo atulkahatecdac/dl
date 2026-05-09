@@ -15,8 +15,8 @@ def gradient(weight):
 # 2. Setup Gradient Descent Parameters
 # -----------------------------------------------------
 learning_rate = 0.1
-# initial_weight = 0.1  # for negative slope
-initial_weight = 5.9  # for positive slope
+initial_weight = 0.1  # for negative slope
+# initial_weight = 5.9  # for positive slope
 num_steps = 40
 
 weights_history = [initial_weight]

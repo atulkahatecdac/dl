@@ -10,7 +10,8 @@ w = 0.1   # weight (slope)
 b = 0.3   # bias (intercept)
 
 learning_rate = 0.1
-epochs = 40
+#epochs = 40
+epochs = 200
 
 
 def predict(i):

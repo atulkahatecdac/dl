@@ -14,7 +14,7 @@ def predict(i):
     return w * i
 
 costs = []
-epochs = 25
+epochs = 100
 
 # -----------------------------------------------------
 # TRAINING LOOP
@@ -67,8 +67,8 @@ for step in range(epochs):
 # -----------------------------------------------------
 print("\n--- Testing ---")
 
-test_inputs = [5, 16]
-test_targets = [10, 22]        # Added 10 to each target
+test_inputs = [5, 6]
+test_targets = [20, 22]        # Added 10 to each target
 
 pred = [predict(i) for i in test_inputs]
 
